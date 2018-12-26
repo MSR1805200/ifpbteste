@@ -1,1 +1,19 @@
-pint('ola mundo')
+import telepot
+import aiml
+
+kernel =aiml.Kernel()
+kernel.learn("aiml/ai.aiml")
+
+
+
+telegram = telepot.Bot("690908529:AAGCWYgSCeH-E0WSS1XL7CsysFZw8q7h3iA")
+
+
+def receber(msg):
+  (msg['text'])
+  tipomsg,tipochat,chatID=telepot.glance(msg)
+  telegram.sendMessage(chatID,kernel.respond((msg['text'])))
+  
+telegram.message_loop(receber)
+while True:
+  pass
